@@ -62,7 +62,7 @@ module.exports = function makeBoundArray(trace, arrayIn, v0In, dvIn, numbricks, 
     } else {
         var calendar = trace[ax._id.charAt(0) + 'calendar'];
 
-        if(isArrayOrTypedArray(arrayIn) && arrayIn.length === 1) {
+        if(isArrayOrTypedArray(arrayIn) && arrayIn.length === 1 && !isHist) {
             v0 = arrayIn[0];
         } else if(v0In === undefined) {
             v0 = 0;
